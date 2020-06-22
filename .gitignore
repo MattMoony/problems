@@ -1,4 +1,6 @@
-build-*
-**/*.pro*
-**/.gitignore
-!./.gitignore
+*
+!*.*
+!*/
+
+.vscode
+*.pro*
