@@ -1,22 +1,44 @@
 #include <stdio.h>
-#include <unordered_map>
+#include <set>
+
+#define MAX_N 1000000
 
 int Q;
-std::unordered_map<long long, long long> m;
+long long v[MAX_N];
+
+struct ref {
+    long long key;
+    int ind;
+};
+
+bool operator<(const ref& r1, const ref& r2) { return r1.key < r2.key; }
+bool operator>(const ref& r1, const ref& r2) { return r1.key > r2.key; }
+bool operator==(const ref& r1, const ref& r2) { return r1.key == r2.key; }
+
+std::set<ref> m;
 
 int main() {
     scanf("%d", &Q);
-    int t;
-    long long k, v;
+    int c = 0;
+    int x;
+    long long y, z;
     for (int i = 0; i < Q; i++) {
-        scanf("%d", &t);
-        if (t == 0) {
-            scanf("%lld %lld", &k, &v);
-            m[k] = v;
+        scanf("%d %lld", &x, &y);
+        auto it = m.find({ y, -1 });
+        if (x == 0) {
+            scanf("%lld", &z);
+            if (it == m.end()) {
+                v[c] = z;
+                m.insert({ y, c++ });
+            } else {
+                v[(*it).ind] = z;
+            }
         } else {
-            scanf("%lld", &k);
-            if (m.find(k) == m.end()) printf("0\n");
-            else printf("%lld\n", m.at(k));
+            if (it == m.end()) {
+                printf("0\n");
+            } else {
+                printf("%lld\n", v[(*it).ind]);
+            }
         }
     }
     return 0;
