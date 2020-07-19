@@ -17,6 +17,7 @@ I don't come up with most of the problems myself, here are my sources (also, do 
 * [Project Euler](https://projecteuler.net/)
 * [Yosupo](https://judge.yosupo.jp/)
 * [CSES](https://cses.fi/problemset) ([Write-Ups](cses/README.md))
+* [Codeforces](https://codeforces.com/)
 
 _This list will probably grow on in the future._
 
