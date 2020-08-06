@@ -7,7 +7,7 @@ _... and solutions_
 
 One can only get better by practicing - and that's what this repository is about. It contains problems (and their solutions) in C++. I do this in order to improve both my C++ and problem solving / alogrithmic skills. 
 
-In a best-case scenario, I will add a new problem and its solution everyday, but since I'm currently attending college that seems a little unlikely.
+In a best-case scenario, I will add a new problem and its solution everyday, but since I'm currently attending college, that seems a little unlikely.
 
 ## References
 
